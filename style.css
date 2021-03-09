@@ -66,7 +66,7 @@ h3::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 15px 50px;
+  padding: 15px 0;
   background-image: url("");
   background-size: cover;
   background-position: center;
@@ -127,9 +127,11 @@ h3::after {
 
 .wrapper main p {
   margin-left: 15px;
+  padding: 0 15px;
 }
 
 .wrapper main .education .text-content {
+  margin-left: 15px;
   margin-bottom: 20px;
 }
 
@@ -139,6 +141,7 @@ h3::after {
 }
 
 .wrapper main .education .text-content p, .wrapper main .education .text-content a {
+  margin-left: 0;
   padding-bottom: 5px;
   font-size: 0.9rem;
 }
@@ -166,7 +169,7 @@ h3::after {
 }
 
 .wrapper main .code-examples li h4 {
-  margin-left: 12px;
+  margin-left: 15px;
 }
 
 .wrapper main .code-examples .short-link {
