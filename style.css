@@ -4,10 +4,13 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: .2s all;
+  -o-transition: .2s all;
+  transition: .2s all;
 }
 
 body {
-  background-color: silver;
+  background-color: white;
 }
 
 li {
@@ -17,13 +20,16 @@ li {
 a {
   color: #252525;
   text-decoration: none;
+  font-size: 1.1rem;
+}
+
+a:hover {
+  text-shadow: 1px 1px 2px rgba(68, 68, 68, 0.527);
 }
 
 h3 {
   font-size: 2rem;
   position: relative;
-  text-align: center;
-  padding-bottom: 4px;
   margin-bottom: 10px;
 }
 
@@ -31,7 +37,7 @@ h3::after {
   content: '';
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.37);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -42,23 +48,15 @@ h3::after {
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
-  padding: 5px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  grid-gap: 25px;
+  padding: 20px;
 }
 
 .wrapper .header {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 300px 1fr;
-      grid-template-columns: 300px 1fr;
-  grid-gap: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-top: 5px;
-  color: white;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin-bottom: 30px;
 }
 
 .wrapper .header-photo {
@@ -68,10 +66,10 @@ h3::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 15px 50px;
   background-image: url("");
   background-size: cover;
   background-position: center;
-  background-color: #464545;
 }
 
 .wrapper .header-photo img {
@@ -90,59 +88,83 @@ h3::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-  background-color: #464545;
+  width: 100%;
 }
 
 .wrapper .header-about .text-block .header-about_name {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
 }
 
 .wrapper .header-about .text-block .header-about_position {
-  font-size: 1.5rem;
-  color: #d69c1a;
-  margin-bottom: 25px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .wrapper .header-about .text-block .header-about_skills {
   opacity: 0.8;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.wrapper .header-about i {
+  min-width: 20px;
 }
 
 .wrapper main {
-  border-radius: 5px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 300px 1fr;
-      grid-template-columns: 300px 1fr;
-  grid-gap: 25px;
-  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.wrapper main .left-side {
-  background-color: white;
+.wrapper main section {
+  margin-bottom: 30px;
 }
 
-.wrapper main .left-side section {
-  margin: 30px;
+.wrapper main p {
+  margin-left: 15px;
 }
 
-.wrapper main .left-side .contacts i {
-  margin-right: 10px;
+.wrapper main .education .text-content {
+  margin-bottom: 20px;
 }
 
-.wrapper main .left-side .contacts li {
-  padding-left: 10px;
-  margin-bottom: 5px;
+.wrapper main .education .text-content h4 {
+  font-size: 1.3rem;
+  padding-bottom: 5px;
 }
 
-.wrapper main .left-side .education .educ-info {
-  margin-left: 10px;
+.wrapper main .education .text-content p, .wrapper main .education .text-content a {
+  padding-bottom: 5px;
+  font-size: 0.9rem;
 }
 
-.wrapper main .right-side {
-  background-color: #9b9999;
+.wrapper main .summary P {
+  text-indent: 1.5em;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.wrapper main .summary ul {
+  padding-left: 1rem;
+}
+
+.wrapper main .skills p {
+  padding-bottom: 5px;
+}
+
+.wrapper main .code-examples li {
+  margin-bottom: 0.5rem;
+}
+
+.wrapper main .code-examples li h4 {
+  margin-left: 12px;
+}
+
+.wrapper main .code-examples .short-link {
+  font-size: 0.8rem;
 }
