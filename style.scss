@@ -1,4 +1,4 @@
-$bgcolor:rgb(206, 202, 202);
+
 
 * {
    font-family: Roboto;
@@ -111,6 +111,9 @@ h3 {
                margin-bottom: 1rem;
             }
             ul {
+               padding-left: 1rem;
+            }
+            li {
                padding-left: 1rem;
             }
          }

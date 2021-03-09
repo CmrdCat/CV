@@ -153,6 +153,10 @@ h3::after {
   padding-left: 1rem;
 }
 
+.wrapper main .summary li {
+  padding-left: 1rem;
+}
+
 .wrapper main .skills p {
   padding-bottom: 5px;
 }
