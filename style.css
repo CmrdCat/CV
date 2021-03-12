@@ -126,7 +126,6 @@ h3::after {
 }
 
 .wrapper main p {
-  margin-left: 15px;
   padding: 0 15px;
 }
 
@@ -153,7 +152,7 @@ h3::after {
 }
 
 .wrapper main .summary ul {
-  padding-left: 1rem;
+  padding-left: 15px;
 }
 
 .wrapper main .summary li {
