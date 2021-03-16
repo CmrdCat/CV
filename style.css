@@ -20,7 +20,6 @@ li {
 a {
   color: #252525;
   text-decoration: none;
-  font-size: 1.1rem;
 }
 
 a:hover {
@@ -31,6 +30,7 @@ h3 {
   font-size: 2rem;
   position: relative;
   margin-bottom: 10px;
+  padding-left: 1rem;
 }
 
 h3::after {
@@ -59,22 +59,21 @@ h3::after {
   margin-bottom: 30px;
 }
 
-.wrapper .header-photo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 15px 0;
-  background-image: url("");
-  background-size: cover;
-  background-position: center;
+@media screen and (max-width: 426px) {
+  .wrapper .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .wrapper .header-photo img {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   border: 1px solid darkgrey;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .wrapper .header-about {
@@ -89,6 +88,7 @@ h3::after {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .wrapper .header-about .text-block .header-about_name {
@@ -111,6 +111,10 @@ h3::after {
   min-width: 20px;
 }
 
+.wrapper .header-about a {
+  font-size: 1.1rem;
+}
+
 .wrapper main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,16 +129,20 @@ h3::after {
   margin-bottom: 30px;
 }
 
-.wrapper main p {
-  padding: 0 15px;
+.wrapper main a {
+  font-style: italic;
+}
+
+.wrapper main .block-content {
+  margin-left: 1rem;
 }
 
 .wrapper main .education .text-content {
-  margin-left: 15px;
   margin-bottom: 20px;
 }
 
 .wrapper main .education .text-content h4 {
+  font-style: normal;
   font-size: 1.3rem;
   padding-bottom: 5px;
 }
@@ -151,10 +159,6 @@ h3::after {
   margin-bottom: 1rem;
 }
 
-.wrapper main .summary ul {
-  padding-left: 15px;
-}
-
 .wrapper main .summary li {
   padding-left: 1rem;
 }
@@ -167,15 +171,11 @@ h3::after {
   margin-bottom: 0.5rem;
 }
 
-.wrapper main .code-examples li h4 {
-  margin-left: 15px;
+.wrapper main .code-examples li a {
+  font-size: .8rem;
 }
 
-.wrapper main .code-examples .short-link {
-  font-size: 0.8rem;
-}
-
-.wrapper .online-link {
+.wrapper .r-side-link {
   text-align: right;
   font-size: 0.8rem;
 }

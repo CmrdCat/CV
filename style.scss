@@ -16,7 +16,6 @@ li {
 a {
    color: rgb(37, 37, 37);
    text-decoration: none;
-   font-size: 1.1rem;
 }
 a:hover {
       text-shadow: 1px 1px 2px rgba(68, 68, 68, 0.527);
@@ -25,6 +24,7 @@ h3 {
    font-size: 2rem;
    position: relative;
    margin-bottom: 10px;
+   padding-left: 1rem;
    &::after {
       content:'';
       width: 100%;
@@ -45,16 +45,15 @@ h3 {
       display: flex;
       border-top: 5px;
       margin-bottom: 30px;
+      @media screen and (max-width:426px){
+         flex-direction: column;
+      }
       &-photo {
-         display: flex;
-         justify-content: center;
-         padding:  15px 0;
-         background-image: url('');
-         background-size: cover;
-         background-position: center;
          img {
-            width: 200px;
+            width: 100%;
+            max-width: 200px;
             border: 1px solid darkgrey;
+            object-fit: cover;
          }
       }
       &-about {
@@ -62,6 +61,7 @@ h3 {
          flex-direction: column;
          justify-content: center;
          width: 100%;
+         margin-bottom: 10px;
          .text-block {
             .header-about_name {
                font-size: 2rem;
@@ -80,6 +80,9 @@ h3 {
          i {
             min-width: 20px;
          }
+         a {
+            font-size: 1.1rem;
+         }
       }
    }
    main {
@@ -88,14 +91,17 @@ h3 {
       section {
          margin-bottom: 30px;
       };
-      p {
-         padding: 0 15px;
+      a {
+         font-style: italic;
+      }
+      .block-content {
+         margin-left: 1rem;
       }
          .education {
             .text-content {
-               margin-left: 15px;
                margin-bottom: 20px;
                h4 {
+                  font-style: normal;
                   font-size: 1.3rem;
                   padding-bottom: 5px;
                }
@@ -112,9 +118,6 @@ h3 {
                text-align: justify; 
                margin-bottom: 1rem;
             }
-            ul {
-               padding-left: 15px;
-            }
             li {
                padding-left: 1rem;
             }
@@ -127,16 +130,13 @@ h3 {
          .code-examples {
             li {
                margin-bottom: 0.5rem;
-               h4 {
-               margin-left: 15px;
-            }
-            }
-            .short-link {
-               font-size: 0.8rem;
+               a {
+                  font-size: .8rem;
+               }
             }
          }
    }
-   .online-link {
+   .r-side-link {
       text-align: right;
       font-size: 0.8rem;
    }
